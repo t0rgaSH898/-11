@@ -1,28 +1,32 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-    int N;
-    bool isPrime = true;
-    
-    cin >> N;
-    
-    if (N < 2) {
-        isPrime = false;
-    }
-    
-    for (int i = 2; i < N; i++) {
-        if (N % i == 0) {
-            isPrime = false;
-            break;
-        }
-    }
-    
-    if (isPrime) {
+    setlocale(LC_ALL, "Russian");
+
+    int n;
+    cin >> n;
+
+    if (n < 2) {
+        cout << "Не простое" << endl;
+    } else if (n == 2) {
         cout << "Простое" << endl;
     } else {
-        cout << "Не простое" << endl;
+        bool isPrime = true;
+        for (int i = 2; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            cout << "Простое" << endl;
+        } else {
+            cout << "Не простое" << endl;
+        }
     }
-    
+
     return 0;
 }
