@@ -1,20 +1,23 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
-    int N;
-    cin >> N;
-    
+    setlocale(LC_ALL, "Russian");
+
+    int n;
+    cin >> n;
+
     int i = 1;
-    while (i <= N) {
+    while (i <= n) {
         int j = 1;
-        while (j <= N) {
+        while (j <= n) {
             cout << i * j << " ";
             j++;
         }
         cout << endl;
         i++;
     }
-    
+
     return 0;
 }
