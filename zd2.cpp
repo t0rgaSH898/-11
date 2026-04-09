@@ -6,13 +6,13 @@ int main() {
     setlocale(LC_ALL, "Russian");
 
     int n;
-    int i;
-    int a = 0;
     cin >> n;
+
+    int sum = 0;
     for (int i = 1; i <= n; i++) {
-        a += i;
-}
-    cout << a << endl;
-    
+        sum += i;
+    }
+    cout << sum << endl;
+
     return 0;
 }
