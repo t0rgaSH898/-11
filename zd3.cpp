@@ -5,13 +5,14 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    int num, sum = 0;
-    cin >> num;
-    while (num != 0) {
-    sum += num;
-    cin >> num;
-    }    
-    cout << sum;
-        
+    int sum = 0;
+    int x;
+
+    while (cin >> x && x != 0) {
+        sum += x;
+    }
+
+    cout << sum << endl;
+
     return 0;
 }
