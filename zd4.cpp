@@ -1,17 +1,23 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
-    int N;
-    
-    cin >> N;
-    
-    for (int i = 1; i <= N; i++) {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cin >> n;
+
+    bool first = true;
+    for (int i = 1; i <= n; i++) {
         if (i % 2 == 0) {
-            cout << i << " ";
+            if (!first) {
+                cout << " ";
+            }
+            cout << i;
+            first = false;
         }
     }
-    
     cout << endl;
+
     return 0;
 }
