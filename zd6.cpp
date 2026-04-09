@@ -1,27 +1,26 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-    int number;
-    int count = 0;
-    
-    cin >> number;
-    
-    if (number == 0) {
+    setlocale(LC_ALL, "Russian");
+
+    int n;
+    cin >> n;
+
+    if (n == 0) {
+
         cout << 0 << endl;
-        return 0;
+    } else {
+        int count = 0;
+        int temp = abs(n);
+        while (temp > 0) {
+            temp /= 10;
+            count++;
+        }
+        cout << count << endl;
     }
-    
-    if (number < 0) {
-        number = -number;
-    }
-    
-    while (number > 0) {
-        number = number / 10;  
-        count++;               
-    }
-    
-    cout << count << endl;
-    
+
     return 0;
 }
